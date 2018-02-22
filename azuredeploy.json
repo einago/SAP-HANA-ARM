@@ -150,7 +150,7 @@
     },
   "variables": {
     "vmName": "[toLower(parameters('vmName'))]",
-    "smallUri": "https://raw.githubusercontent.com/AzureCAT-GSI/SAP-HANA-ARM/master/Vms/small.json",
+    "smallUri": "https://raw.githubusercontent.com/einago/SAP-HANA-ARM/master/Vms/small.json",
     "mediumUri": "https://raw.githubusercontent.com/AzureCAT-GSI/SAP-HANA-ARM/master/Vms/medium.json",
     "largeUri": "https://raw.githubusercontent.com/AzureCAT-GSI/SAP-HANA-ARM/master/Vms/large.json",
     "extralargeUri": "https://raw.githubusercontent.com/AzureCAT-GSI/SAP-HANA-ARM/master/Vms/extralarge.json",
