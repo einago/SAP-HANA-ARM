@@ -15,10 +15,12 @@ param (
     $7zdest = "C:\Program Files\7z.msi"
     $jrepath = "C:\Program Files"
     $hanapath = "C:\SapBits\SAP_HANA_STUDIO"
+    $hanajack = "C:\SapBits\Jack"
     if((test-path $hanadest) -eq $false)
     {
         New-Item -Path $hanadest -ItemType directory
         New-item -Path $hanapath -itemtype directory
+        New-item -Path $hanajack -itemtype directory
     }
     write-host "downloading files"
     Invoke-WebRequest $sapcarUri -OutFile $sapcardest
