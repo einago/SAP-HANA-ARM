@@ -105,7 +105,7 @@ fi
 #!/bin/bash
 cd /hana/data/sapbits
 echo "hana download start" >> /tmp/parameter.txt
-/usr/bin/wget --quiet $Uri/SaPBits/md5sums
+#/usr/bin/wget --quiet $Uri/SaPBits/md5sums
 /usr/bin/wget --quiet $Uri/SaPBits/51052325_part1.exe
 /usr/bin/wget --quiet $Uri/SaPBits/51052325_part2.rar
 /usr/bin/wget --quiet $Uri/SaPBits/51052325_part3.rar
