@@ -29,12 +29,15 @@ param (
     Invoke-WebRequest $7zUri -OutFile $7zdest
     
     cd $jrepath
+    cd >> c:\sapbits\jack.txt
     .\7z.msi /quiet
-    cd "C:\Program Files\7-Zip\" >> c:\sapbits\jack.txt
-    .\7z.exe e "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar.gz" "-oC:\Program Files" >> c:\sapbits\jack.txt
-    .\7z.exe x -y "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar" "-oC:\Program Files" >> c:\sapbits\jack.txt
+    cd "C:\Program Files\7-Zip\"
+    cd >> c:\sapbits\jack.txt
+    .\7z.exe e -y "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar.gz" "-oC:\Program Files"
+    .\7z.exe x -y "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar" "-oC:\Program Files"
     
     cd $hanapath
+    cd >> c:\sapbits\jack.txt
     .\sapcar.exe -xfv IMC_STUDIO2_212_4-80000323.SAR >> c:\sapbits\jack.txt
     
     set PATH=%PATH%C:\Program Files\jdk-9.0.4\bin;
