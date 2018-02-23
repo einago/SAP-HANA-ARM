@@ -88,7 +88,7 @@
             }
         },
         {
-            "apiVersion": "2016-03-30",
+            "apiVersion": "2017-03-30",
             "type": "Microsoft.Compute/virtualMachines",
             "name": "[variables('vmName')]",
             "location": "[resourceGroup().location]",
@@ -98,7 +98,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D1_v2"
+                    "vmSize": "Standard_DS2_v2"
                 },
                 "osProfile": {
                     "computerName": "[variables('vmName')]",
