@@ -113,7 +113,7 @@
                         "version": "latest"
                     },
                     "osDisk": {
-                        "name": "[variables('vmName')]",
+                        "name": "[concat(parameters('vmName'),'-os')]",
                          "createOption": "FromImage",
                          "managedDisk": {"storageAccountType": "Premium_LRS"},
                          "caching": "ReadWrite"
