@@ -1,3 +1,4 @@
+
 param (
     
         [string]$baseUri
@@ -32,6 +33,7 @@ param (
     Invoke-WebRequest $swpmUri -OutFile $swpmdest
     Invoke-WebRequest $jreUri -OutFile $jredest
     Invoke-WebRequest $7zUri -OutFile $7zdest
+    Invoke-WebRequest $sshUri -OutFile $sshdest    
     
     cd $jrepath
     .\7z.msi /quiet
