@@ -10,10 +10,12 @@ param (
     $jreUri = $baseUri + "/SaPBits/SAP_HANA_STUDIO/serverjre-9.0.4_windows-x64_bin.tar.gz" 
     $7zUri = "http://www.7-zip.org/a/7z1701-x64.msi"
     $swpmUri = $baseUri + "/SaPBits/SapBits/SWPM10SP22_2-20009707.SAR"
+    $sshUri = $baseUri + "/SaPBits/SapBits/MobaXterm_Installer_v10.4.zip"
     $sapcardest = "C:\SapBits\SAP_HANA_STUDIO\sapcar.exe"
     $hanastudiodest = "C:\SapBits\SAP_HANA_STUDIO\IMC_STUDIO2_212_4-80000323.SAR"
     $jredest = "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar.gz"
     $swpmdest = "C:\SapBits\SWPM\SWPM10SP22_2-20009707.SAR"
+    $sshdest = "C:\Program Files\MobaXterm_Installer_v10.4.zip"
     $7zdest = "C:\Program Files\7z.msi"
     $jrepath = "C:\Program Files"
     $hanapath = "C:\SapBits\SAP_HANA_STUDIO"
@@ -32,20 +34,24 @@ param (
     Invoke-WebRequest $7zUri -OutFile $7zdest
     
     cd $jrepath
-    cd >> c:\sapbits\jack.txt
     .\7z.msi /quiet
     cd "C:\Program Files\7-Zip\"
-    cd >> c:\sapbits\jack.txt
     .\7z.exe e -y "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar.gz" "-oC:\Program Files"
     .\7z.exe x -y "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar" "-oC:\Program Files"
+    .\7z.exe x -y "C:\Program Files\MobaXterm_Installer_v10.4.zip" "-oC:\Program Files"
+    cd ..
+    .\MobaXterm_installer.msi /quiet
     
     cd $hanapath
-    cd >> c:\sapbits\jack.txt
-    .\sapcar.exe -xfv IMC_STUDIO2_212_4-80000323.SAR >> c:\sapbits\jack.txt
+    
+    .\sapcar.exe -xfv IMC_STUDIO2_212_4-80000323.SAR
     cd $hanajack
-    ..\sapcar.exe -xfv SWPM10SP22_2-20009707.SAR
+    \SapBits\SAP_HANA_STUDIO\sapcar.exe -xvf SWPM10SP22_2-20009707.SAR
     
     set PATH=%PATH%C:\Program Files\jdk-9.0.4\bin;
     set HDB_INSTALLER_TRACE_FILE=C:\Users\testuser\Documents\hdbinst.log
     cd C:\SAPbits\SAP_HANA_STUDIO\SAP_HANA_STUDIO\
     .\hdbinst.exe -a C:\SAPbits\SAP_HANA_STUDIO\SAP_HANA_STUDIO\studio -b --path="C:\Program Files\sap\hdbstudio"
+
+    cd C:\SAPbits\SWPM
+    
