@@ -53,7 +53,7 @@ param (
     set PATH=%PATH%C:\Program Files\jdk-9.0.4\bin;
     set HDB_INSTALLER_TRACE_FILE=C:\Users\testuser\Documents\hdbinst.log
     cd C:\SAPbits\SAP_HANA_STUDIO\SAP_HANA_STUDIO\
-    .\hdbinst.exe -a C:\SAPbits\SAP_HANA_STUDIO\SAP_HANA_STUDIO\studio -b --path="C:\Program Files\sap\hdbstudio"
+    rem .\hdbinst.exe -a C:\SAPbits\SAP_HANA_STUDIO\SAP_HANA_STUDIO\studio -b --path="C:\Program Files\sap\hdbstudio"
 
     cd C:\SAPbits\SWPM
     
