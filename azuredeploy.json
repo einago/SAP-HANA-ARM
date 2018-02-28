@@ -12,7 +12,7 @@
         "HANAJumpbox": {
             "type": "string",
             "metadata": {
-                "description": "Choose whether to deploy a Windows VM with HANA Studio installed"
+                "description": "Choose whether to deploy a Windows App Server with HANA Studio installed"
             },
             "allowedValues": [
                 "yes",
