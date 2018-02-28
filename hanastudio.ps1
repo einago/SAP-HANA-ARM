@@ -14,7 +14,7 @@ param (
     $sshUri = $baseUri + "/SaPBits/SapBits/MobaXterm_Installer_v10.4.zip"
     $sapcardest = "C:\SapBits\SAP_HANA_STUDIO\sapcar.exe"
     $hanastudiodest = "C:\SapBits\SAP_HANA_STUDIO\IMC_STUDIO2_212_4-80000323.SAR"
-    $jredest = "C:\Program Files\serverjre-9.0.4_windows-x64_bin.tar.gz"
+    $jredest = "C:\SapBits\serverjre-9.0.4_windows-x64_bin.tar.gz"
     $swpmdest = "C:\SapBits\SWPM\SWPM10SP22_2-20009707.SAR"
     $sshdest = "C:\SapBits\MobaXterm_Installer_v10.4.zip"
     $7zdest = "C:\SapBits\7z.msi"
