@@ -53,7 +53,8 @@ param (
     set PATH=%PATH%C:\Program Files\jdk-9.0.4\bin;
     set HDB_INSTALLER_TRACE_FILE=C:\Users\testuser\Documents\hdbinst.log
     cd C:\SAPbits\SAP_HANA_STUDIO\SAP_HANA_STUDIO\
-    rem .\hdbinst.exe -a C:\SAPbits\SAP_HANA_STUDIO\SAP_HANA_STUDIO\studio -b --path="C:\Program Files\sap\hdbstudio"
+    .\hdbinst.exe -a C:\SAPbits\SAP_HANA_STUDIO\SAP_HANA_STUDIO\studio -b --path="C:\Program Files\sap\hdbstudio"
 
     cd C:\SAPbits\SWPM
     
+    rem .\Sapinst SAPINST_PARAMETER_CONTAINER_URL=inifile.xml SAPINST_EXECUTE_PRODUCT_ID=NW_ABAP_OneHost:BS2016.ERP608.HDB.PD SAPINST_SKIP_DIALOGS=true -nogui -noguiserver
