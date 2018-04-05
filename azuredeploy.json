@@ -158,7 +158,7 @@
     "hanaUri": "https://raw.githubusercontent.com/einago/SAP-HANA-ARM/master/hanastudio.ps1",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('NetworkName'))]",
     "HANAsubnetRef": "[if (equals(parameters('ExistingNetworkResourceGroup'), 'no') , concat(variables('vnetID'),'/subnets/',parameters('HANASubnetName')),parameters('ExistingNetworkResourceGroup'))]",
-    "mgmtSubnetRef": "[if (equals(parameters('ExistingNetworkResourceGroup'), 'no') , concat(variables('vnetID'),'/subnets/',parameters('ManagementSubnetName')),concat(resourceId(parameters('ExistingNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks/', parameters('NetworkName')), '/subnets/',parameters('ManagementSubnetName')))]",
+    "mgmtSubnetRef": "[if (equals(parameters('ExistingNetworkResourceGroup'), 'no') , concat(variables('vnetID'),'/subnets/',parameters('ManagementSubnetName')),parameters('ExistingNetworkResourceGroup'))]",
     "vmSizeArray": "[split(parameters('vmSize'),' ')]",
     "vmSize": "[variables('vmSizeArray')[0]]"
 },
